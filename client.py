@@ -20,7 +20,8 @@ send.print_config()
 
 toSend = input("send message (y/any key to quite): ")
 while toSend == 'y':
-    send.sendMSG()
+    msg=str(input("please enter the message you want sent:"))
+    send.sendMSG(msg)
     toSend = input("send message (y/any key to quite): ")
 
 print('\nGood Bye')

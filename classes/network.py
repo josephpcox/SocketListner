@@ -10,10 +10,10 @@ class Client:
         self.host = HOST
         self.port = PORT
 
-    def sendMSG(self):
+    def sendMSG(self,msg):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.connect((self.host, self.port))
-            s.sendall('Hello, world'.encode('ascii'))
+            s.sendall(msg.encode('ascii'))
             data = s.recv(1024)
             print('Received', repr(data))
             data = s.recv(1024)
