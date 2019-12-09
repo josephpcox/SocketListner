@@ -1,6 +1,7 @@
 from classes.network import Client
 import json
 
+
 # read file and parse it
 with open('config.json','r') as config_file:
     config_data = config_file.read()
@@ -16,6 +17,12 @@ PORT = int(json_obj['routing']['PORT'])
 print('printing server object\n')
 send = Client(HOST,PORT)
 send.print_config()
-send.sendMSG()
+
+toSend = input("send message (y/any key to quite): ")
+while toSend == 'y':
+    send.sendMSG()
+    toSend = input("send message (y/any key to quite): ")
+
+print('\nGood Bye')
 
 

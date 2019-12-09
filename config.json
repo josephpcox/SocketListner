@@ -4,6 +4,6 @@
         "PORT":"65432"
     },
     "URLs":{
-        "LocalHost":"http://127.0.0.1"
+        "LocalHost":"http://LAPTOP-S6EPM3H0:9090/ws/simple/getJson"
     }
 }
